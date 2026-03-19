@@ -25,12 +25,7 @@
 - ✔️ OK - Query **[ 8 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 11 ]** Result does not match expected output.
-
-
-🔢 Different result lengths: 
-- **Expected:** 1
-- **Got:** 0
+- ✔️ OK - Query **[ 11 ]**
 
 ---
 - ✔️ OK - Query **[ 13 ]**
