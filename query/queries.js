@@ -50,10 +50,10 @@ db.Restaurantes.find({"name": { $regex: "Reg"}}, {restaurant_id: 1, name: 1, bor
 db.Restaurantes.find({ "borough": "Bronx", "cuisine": {$in: ["American", "Chinese"]}}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})
 
 // 18. Trobar restaurant_id, name, borough i cuisine per a Staten Island, Queens, Bronx o Brooklyn.
-db.Restaurantes.find({borough: {$in: ["Staten Island", "Queens", "Bronx", "Brooklyn"]}}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})
+db.Restaurantes.find({"borough": {$in: ["Staten Island", "Queens", "Bronx", "Brooklyn"]}}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})
 
 // 19. Trobar restaurant_id, name, borough i cuisine per a restaurants que NO són d'aquests barris.
-db.Restaurantes.find({borough: {$nin: ["Staten Island", "Queens", "Bronx", "Brooklyn"]}}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})
+db.Restaurantes.find({"borough": {$nin: ["Staten Island", "Queens", "Bronx", "Brooklyn"]}}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})
 
 // 20. Trobar restaurant_id, name, borough i cuisine amb marcador no superior a 10.
 db.Restaurantes.find({"grades.score": { $lte: 10 }}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})
