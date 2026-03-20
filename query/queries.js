@@ -23,10 +23,10 @@ db.restaurants.find({"borough": "Bronx"}, {_id: 0}).skip(5).limit(5)
 db.restaurants.find({"grades.score" : {"$gt" : 90}}, {"_id":0})
 
 // 9. Trobar els restaurants amb un score de més de 80 però menys que 100.
-db.Restaurantes.find({grades: {$elemMatch: {score: {$gt:80, $lt:100}}}}, {_id:0})
+db.restaurants.find({grades: {$elemMatch: {score: {$gt:80, $lt:100}}}}, {_id:0})
 
 // 10. Trobar els restaurants amb longitud menor que -95.754168.
-db.Restaurantes.find({"location.coordinates.0": { $lt: -95.754168 }}, {"_id":0})
+db.restaurants.find({"location.coordinates.0": { $lt: -95.754168 }}, {"_id":0})
 
 // 11. Trobar restaurants que no preparen 'American', amb qualificació > 70 i longitud < -65.754168.
 db.restaurants.find({"cuisine": {$ne: "American"},"grades": {$elemMatch: {"score": {$gt:70}}},"location.coordinates.0": {$lt: -65.754168}}, {_id: 0})
@@ -38,25 +38,25 @@ db.restaurants.find({"cuisine": {$ne: "American"},"grades": {$elemMatch: {"score
 db.restaurants.find({"cuisine": {$ne: "American"},"grades": {$elemMatch: {grade: "A"}},"borough": {$ne: "Brooklyn"}}, {_id: 0}).sort({ cuisine: -1 })
 
 // 14. Trobar restaurant_id, name, borough i cuisine on el nom comença amb 'Wil'.
-db.Restaurantes.find({"name": { $regex: "^Wil"}}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})
+db.restaurants.find({"name": { $regex: "^Wil"}}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})
 
 // 15. Trobar restaurant_id, name, borough i cuisine on el nom acaba en 'ces'.
-db.Restaurantes.find({"name": { $regex: "ces$"}}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})
+db.restaurants.find({"name": { $regex: "ces$"}}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})
 
 // 16. Trobar restaurant_id, name, borough i cuisine on el nom conté 'Reg'.
-db.Restaurantes.find({"name": { $regex: "Reg"}}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})
+db.restaurants.find({"name": { $regex: "Reg"}}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})
 
 // 17. Trobar restaurants del Bronx que preparen cuina americana o xinesa.
-db.Restaurantes.find({ "borough": "Bronx", "cuisine": {$in: ["American", "Chinese"]}}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})
+db.restaurants.find({ "borough": "Bronx", "cuisine": {$in: ["American", "Chinese"]}}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})
 
 // 18. Trobar restaurant_id, name, borough i cuisine per a Staten Island, Queens, Bronx o Brooklyn.
-db.Restaurantes.find({"borough": {$in: ["Staten Island", "Queens", "Bronx", "Brooklyn"]}}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})
+db.restaurants.find({"borough": {$in: ["Staten Island", "Queens", "Bronx", "Brooklyn"]}}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})
 
 // 19. Trobar restaurant_id, name, borough i cuisine per a restaurants que NO són d'aquests barris.
-db.Restaurantes.find({"borough": {$nin: ["Staten Island", "Queens", "Bronx", "Brooklyn"]}}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})
+db.restaurants.find({"borough": {$nin: ["Staten Island", "Queens", "Bronx", "Brooklyn"]}}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})
 
 // 20. Trobar restaurant_id, name, borough i cuisine amb marcador no superior a 10.
-db.Restaurantes.find({"grades.score": { $lte: 10 }}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})
+db.restaurants.find({"grades.score": { $lte: 10 }}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})
 
 // 21. Trobar restaurants que preparen peix, no 'American' ni 'Chinees', o nom comença amb 'Wil'.
 
