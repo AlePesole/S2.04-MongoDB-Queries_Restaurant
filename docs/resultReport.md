@@ -46,12 +46,7 @@
 - ✔️ OK - Query **[ 16 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 17 ]** Result does not match expected output.
-
-
-🧩 Mismatch at position 0:
-- **Expected:** {"address":{},"borough":"Bronx","cuisine":"American","grades":[{},{},{}],"location":{},"name":"Wild Asia","restaurant_id":40357217}
-- **Actual:** {"borough":"Bronx","cuisine":"American","name":"Wild Asia","restaurant_id":40357217}
+- ✔️ OK - Query **[ 17 ]**
 
 ---
 - ✔️ OK - Query **[ 18 ]**
