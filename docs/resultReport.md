@@ -57,3 +57,63 @@
 ---
 - ✔️ OK - Query **[ 20 ]**
 
+---
+- ✔️ OK - Query **[ 21 ]**
+
+---
+- ✔️ OK - Query **[ 22 ]**
+
+---
+- ✔️ OK - Query **[ 23 ]**
+
+---
+- ❌ MISMATCH - Query **[ 25 ]** Result does not match expected output.
+
+
+🔢 Different result lengths: 
+- **Expected:** 664
+- **Got:** 0
+
+---
+- ❌ MISMATCH - Query **[ 26 ]** Result does not match expected output.
+
+
+🔢 Different result lengths: 
+- **Expected:** 664
+- **Got:** 0
+
+---
+- ❌ MISMATCH - Query **[ 27 ]** Result does not match expected output.
+
+
+🔢 Different result lengths: 
+- **Expected:** 664
+- **Got:** 0
+
+---
+- ❌ MISMATCH - Query **[ 28 ]** Result does not match expected output.
+
+
+🔢 Different result lengths: 
+- **Expected:** 3
+- **Got:** 2
+
+---
+- ❌ MISMATCH - Query **[ 29 ]** Result does not match expected output.
+
+
+🔢 Different result lengths: 
+- **Expected:** 664
+- **Got:** 0
+
+---
+- ✔️ OK - Query **[ 30 ]**
+
+---
+- ❌ MISMATCH - Query **[ 31 ]** Result does not match expected output.
+
+
+🔢 Different result lengths: 
+- **Expected:** 10
+- **Got:** 7
+
