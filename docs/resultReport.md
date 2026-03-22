@@ -70,28 +70,13 @@
 - ✔️ OK - Query **[ 24 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 25 ]** Result does not match expected output.
-
-
-🔢 Different result lengths: 
-- **Expected:** 664
-- **Got:** 0
+- ✔️ OK - Query **[ 25 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 26 ]** Result does not match expected output.
-
-
-🔢 Different result lengths: 
-- **Expected:** 664
-- **Got:** 0
+- ✔️ OK - Query **[ 26 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 27 ]** Result does not match expected output.
-
-
-🔢 Different result lengths: 
-- **Expected:** 664
-- **Got:** 0
+- ✔️ OK - Query **[ 27 ]**
 
 ---
 - ❌ MISMATCH - Query **[ 28 ]** Result does not match expected output.

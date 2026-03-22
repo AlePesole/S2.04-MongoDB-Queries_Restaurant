@@ -1,7 +1,7 @@
 1. ## 📊 Query Performance Report
 
 - 🧪 **Query**: `db.restaurants.find({}, {_id: 0})`
-- ⏱️ **Execution time**: 1 ms
+- ⏱️ **Execution time**: 0 ms
 - 📚 **Documents returned**: 664
 - 🔍 **Documents examined**: 664
 - 🛠️ **Execution stage**: PROJECTION_SIMPLE
@@ -12,7 +12,7 @@
 2. ## 📊 Query Performance Report
 
 - 🧪 **Query**: `db.restaurants.find({}, {restaurant_id: 1, name: 1, _id: 0})`
-- ⏱️ **Execution time**: 1 ms
+- ⏱️ **Execution time**: 0 ms
 - 📚 **Documents returned**: 664
 - 🔍 **Documents examined**: 664
 - 🛠️ **Execution stage**: PROJECTION_SIMPLE
@@ -23,7 +23,7 @@
 3. ## 📊 Query Performance Report
 
 - 🧪 **Query**: `db.restaurants.find({}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})`
-- ⏱️ **Execution time**: 1 ms
+- ⏱️ **Execution time**: 0 ms
 - 📚 **Documents returned**: 664
 - 🔍 **Documents examined**: 664
 - 🛠️ **Execution stage**: PROJECTION_SIMPLE
@@ -100,7 +100,7 @@
 10. ## 📊 Query Performance Report
 
 - 🧪 **Query**: `db.restaurants.find({"location.coordinates.0": { $lt: -95.754168 }}, {"_id":0})`
-- ⏱️ **Execution time**: 1 ms
+- ⏱️ **Execution time**: 0 ms
 - 📚 **Documents returned**: 0
 - 🔍 **Documents examined**: 664
 - 🛠️ **Execution stage**: PROJECTION_SIMPLE
@@ -133,7 +133,7 @@
 13. ## 📊 Query Performance Report
 
 - 🧪 **Query**: `db.restaurants.find({"cuisine": {$ne: "American"},"grades": {$elemMatch: {grade: "A"}},"borough": {$ne: "Brooklyn"}}, {_id: 0}).sort({ cuisine: -1 })`
-- ⏱️ **Execution time**: 3 ms
+- ⏱️ **Execution time**: 2 ms
 - 📚 **Documents returned**: 318
 - 🔍 **Documents examined**: 403
 - 🛠️ **Execution stage**: PROJECTION_SIMPLE
@@ -177,7 +177,7 @@
 17. ## 📊 Query Performance Report
 
 - 🧪 **Query**: `db.restaurants.find({ "borough": "Bronx", "cuisine": {$in: ["American", "Chinese"]}}, {_id: 0})`
-- ⏱️ **Execution time**: 0 ms
+- ⏱️ **Execution time**: 1 ms
 - 📚 **Documents returned**: 22
 - 🔍 **Documents examined**: 54
 - 🛠️ **Execution stage**: PROJECTION_SIMPLE
@@ -210,7 +210,7 @@
 20. ## 📊 Query Performance Report
 
 - 🧪 **Query**: `db.restaurants.find({"grades.score": { $lte: 10 }}, {restaurant_id: 1, name: 1, borough: 1, cuisine: 1, _id: 0})`
-- ⏱️ **Execution time**: 3 ms
+- ⏱️ **Execution time**: 2 ms
 - 📚 **Documents returned**: 612
 - 🔍 **Documents examined**: 612
 - 🛠️ **Execution stage**: PROJECTION_SIMPLE
@@ -257,7 +257,7 @@
 24. ## 📊 Query Performance Report
 
 - 🧪 **Query**: `db.restaurants.find({"location.coordinates": {$near: {$geometry: {type: "Point", coordinates: [-74, 40.7]},$maxDistance: 5000}}},{restaurant_id: 1,name: 1,"address.street": 1,"address.zipcode": 1,"location.coordinates": 1, _id: 0})`
-- ⏱️ **Execution time**: 3 ms
+- ⏱️ **Execution time**: 2 ms
 - 📚 **Documents returned**: 147
 - 🔍 **Documents examined**: 206
 - 🛠️ **Execution stage**: PROJECTION_DEFAULT
@@ -267,51 +267,33 @@
 
 25. ## 📊 Query Performance Report
 
-- 🧪 **Query**: `db.restaurants.find({_id: 0}).sort({name: 1})`
-- ⏱️ **Execution time**: 0 ms
-- 📚 **Documents returned**: 0
-- 🔍 **Documents examined**: 0
-- 🛠️ **Execution stage**: EXPRESS_IXSCAN
+- 🧪 **Query**: `db.restaurants.find({}, {_id: 0}).sort({name: 1})`
+- ⏱️ **Execution time**: 2 ms
+- 📚 **Documents returned**: 664
+- 🔍 **Documents examined**: 664
+- 🛠️ **Execution stage**: PROJECTION_SIMPLE
 
-## 🚨 Performance Issues
-
-### ⚠️ High Priority Issues
-- ‼️ Sorting on unindexed field 'name' - performance may suffer.
-
-### 💡 Suggested Indexes
-Consider creating these indexes:
-```javascript
-db.restaurants.createIndex({ name: 1 });
-```
+## ✅ No significant issues detected
 
 
 26. ## 📊 Query Performance Report
 
-- 🧪 **Query**: `db.restaurants.find({_id: 0}).sort({name: -1})`
-- ⏱️ **Execution time**: 0 ms
-- 📚 **Documents returned**: 0
-- 🔍 **Documents examined**: 0
-- 🛠️ **Execution stage**: EXPRESS_IXSCAN
+- 🧪 **Query**: `db.restaurants.find({}, {_id: 0}).sort({name: -1})`
+- ⏱️ **Execution time**: 2 ms
+- 📚 **Documents returned**: 664
+- 🔍 **Documents examined**: 664
+- 🛠️ **Execution stage**: PROJECTION_SIMPLE
 
-## 🚨 Performance Issues
-
-### ⚠️ High Priority Issues
-- ‼️ Sorting on unindexed field 'name' - performance may suffer.
-
-### 💡 Suggested Indexes
-Consider creating these indexes:
-```javascript
-db.restaurants.createIndex({ name: 1 });
-```
+## ✅ No significant issues detected
 
 
 27. ## 📊 Query Performance Report
 
-- 🧪 **Query**: `db.restaurants.find({_id: 0}).sort({cuisine: 1, borough: -1})`
-- ⏱️ **Execution time**: 0 ms
-- 📚 **Documents returned**: 0
-- 🔍 **Documents examined**: 0
-- 🛠️ **Execution stage**: EXPRESS_IXSCAN
+- 🧪 **Query**: `db.restaurants.find({}, {_id: 0}).sort({cuisine: 1, borough: -1})`
+- ⏱️ **Execution time**: 2 ms
+- 📚 **Documents returned**: 664
+- 🔍 **Documents examined**: 664
+- 🛠️ **Execution stage**: SORT
 
 ## 🚨 Performance Issues
 
@@ -327,8 +309,8 @@ db.restaurants.createIndex({ cuisine: 1 });
 
 28. ## 📊 Query Performance Report
 
-- 🧪 **Query**: `db.restaurants.find({$or: [{"address.street": {$exists: false}, "address.street": null}]},{address:1,_id:0})`
-- ⏱️ **Execution time**: 1 ms
+- 🧪 **Query**: `db.restaurants.find({$or: [{"address.street": {$exists: false}, "address.street": null}]}, {address:1, _id:0})`
+- ⏱️ **Execution time**: 0 ms
 - 📚 **Documents returned**: 2
 - 🔍 **Documents examined**: 664
 - 🛠️ **Execution stage**: PROJECTION_SIMPLE
@@ -350,7 +332,7 @@ db.restaurants.createIndex({ address.street: 1 });
 
 29. ## 📊 Query Performance Report
 
-- 🧪 **Query**: `db.restaurants.find({"address.coord":{$type:"double"}},{name: 1,"location": 1,_id:0})`
+- 🧪 **Query**: `db.restaurants.find({"address.coordinates":{$type:"double"}},{name: 1,"location": 1,_id:0})`
 - ⏱️ **Execution time**: 0 ms
 - 📚 **Documents returned**: 0
 - 🔍 **Documents examined**: 664
@@ -383,7 +365,7 @@ db.restaurants.createIndex({ location: 1 });
 
 31. ## 📊 Query Performance Report
 
-- 🧪 **Query**: `db.restaurants.find({name:{$regex:/mon/}},{name: 1,cuisine: 1, borough: 1,location: 1,_id: 0})`
+- 🧪 **Query**: `db.restaurants.find({"name":{$regex:/mon/}},{name: 1,cuisine: 1, borough: 1,location: 1,_id: 0})`
 - ⏱️ **Execution time**: 1 ms
 - 📚 **Documents returned**: 7
 - 🔍 **Documents examined**: 7
