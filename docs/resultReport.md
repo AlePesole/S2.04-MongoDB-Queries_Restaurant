@@ -82,21 +82,14 @@
 - ✔️ OK - Query **[ 28 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 29 ]** Result does not match expected output.
-
-
-🔢 Different result lengths: 
-- **Expected:** 664
-- **Got:** 0
+- ✔️ OK - Query **[ 29 ]**
 
 ---
 - ✔️ OK - Query **[ 30 ]**
 
 ---
-- ❌ MISMATCH - Query **[ 31 ]** Result does not match expected output.
+- ✔️ OK - Query **[ 31 ]**
 
-
-🔢 Different result lengths: 
-- **Expected:** 10
-- **Got:** 7
+---
+- ✔️ OK - Query **[ 32 ]**
 
