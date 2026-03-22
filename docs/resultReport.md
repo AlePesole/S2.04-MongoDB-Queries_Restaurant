@@ -67,6 +67,9 @@
 - ✔️ OK - Query **[ 23 ]**
 
 ---
+- ✔️ OK - Query **[ 24 ]**
+
+---
 - ❌ MISMATCH - Query **[ 25 ]** Result does not match expected output.
 
 
