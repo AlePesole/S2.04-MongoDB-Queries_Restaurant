@@ -84,7 +84,7 @@
 
 🔢 Different result lengths: 
 - **Expected:** 3
-- **Got:** 2
+- **Got:** 1
 
 ---
 - ❌ MISMATCH - Query **[ 29 ]** Result does not match expected output.
